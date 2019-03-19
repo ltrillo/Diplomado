@@ -1,0 +1,370 @@
+body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+    width: 100%;
+}
+h1 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: darkcyan;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+h3 {
+    font-size: 20px;
+    margin: 0px 0px;
+}
+h4 {
+    font-size: 18px;
+    line-height: 1.375em;
+    color: darkcyan;
+    font-weight: 400;
+    margin-bottom: 20px;
+} 
+#condiciones h4 {
+    margin-bottom: 0px;
+} 
+#como h2 {
+    margin-top: 0px;
+}
+#como h4 {
+    font-size: 16px;
+}
+#como {
+    padding: 55px 50px 30px 50px;
+}
+#como .col-sm-12  {
+    padding: 0;
+}
+#como .col-sm-3 {
+    padding: 50px 0px 36px 0px;
+}
+#como .col-sm-9  {
+    padding: 50px 20px 36px 20px;
+}
+#como .row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+#calculadora, #condiciones {
+    padding: 90px 50px 30px 50px;
+}
+#faq {
+    padding: 130px 50px 0px 50px;
+}
+.jumbotron {
+    background-color: darkcyan;
+    color: #fff;
+    padding: 280px 25px;
+    font-family: Montserrat, sans-serif;
+    width: 100%;
+}
+.container {
+    margin: 0px 0px;
+    width: 100%;
+}
+.container-fluid {
+    padding: 62px 50px 30px 50px;
+}
+.container-fluid #tabla_resulta {
+    padding: 0px 50px;
+}
+.container-color{
+    background-color:darkkhaki;
+}
+p {
+    color:darkkhaki;
+}
+#contacto p {
+    color:darkcyan;
+}
+.bg-grey {
+    background-color: #f6f6f6;
+}
+.logo1 {
+    color: darkcyan;
+    font-size: 180px;
+    padding-left: 35px;
+    padding-top: 15px;
+}
+.logo2 {
+    color: darkcyan;
+    font-size: 180px;
+    padding-right: 35px;
+    padding-left: 75px;
+}
+.panel {
+    border: 5px solid darkkhaki; 
+    border-radius:10px !important;
+    transition: box-shadow 0.5s;
+    width: 170px;
+    margin-left: 8px;
+}
+.panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+.panel-footer {
+    background-color: #fff !important;
+    color: darkcyan;
+}
+.panel-heading  {
+    color: #fff !important;
+    background-color: darkcyan!important;
+    padding: 10px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 30px;
+}
+.panel-heading h1  {
+    font-size: 15px;  
+}
+.panel-body {
+    color: darkkhaki;
+}
+.panel-footer {
+    background-color: white !important;
+}
+.panel-footer h3 {
+    font-size: 30px;
+}
+.panel-footer h4 {
+    color: darkkhaki!important;
+    font-size: 10px;
+}
+.navbar {
+    margin-bottom: 0;
+    background-color: darkcyan;
+    z-index: 9999;
+    border: 0;
+    font-size: 14px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    padding-right: 0px;
+    width: 100%;
+}
+.navbar-right {
+    float: right!important;
+    margin: 0px;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: darkcyan !important;
+    background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: darkcyan;
+}
+.slideanim {
+    visibility:hidden;
+}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+select[multiple], select[size], input, button {
+    height:30px ;
+    width:250px ;
+    text-align: center !important;
+    align-items: right !important;  
+    margin-bottom: 0px;
+    color: darkcyan;
+}
+option #plazo {
+    text-align: right !important;
+}
+button {    
+    background-color: darkcyan;
+    color: white;
+}
+table, th, td {
+    border: 1px solid whitesmoke;
+    border-spacing: 20px;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+th {
+    width: 20%;
+    padding: 5px;
+    text-align: center;  
+    background-color: darkcyan !important; 
+    color: darkkhaki;
+}
+td {
+    width: 20%;
+    padding: 2px 10px 0 10px;
+    text-align: right;
+    color: darkcyan;
+}
+p {
+    margin: 15px 0 0px;
+}
+i {
+    font-size:18px;
+}
+.col-sm-4 {
+    width: 33.33%;
+    padding-bottom: 100px;
+} 
+.col-sm-8 {
+    width: 66.66%;
+    padding-bottom: 100px;
+} 
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+/*responsive*/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+}    
+@media (min-width: 426px) and (max-width: 768px) {
+    
+}
+@media (min-width: 376px) and (max-width: 425px) {
+}
+@media (min-width: 321px) and (max-width: 375px) {
+}
+@media (max-width: 320px) {
+}
+
+/*Modal de registro solo para efectos academicos*/
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 0 0 22px 0;
+    display: block;
+    border: none;
+    background: #ccc;
+}
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ccc;
+    outline: none;
+}
+.checkbox {
+    height: 20px;
+    width: 53px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+/* Set a style for all buttons */
+.signupbtn {
+    background-color: darkcyan;
+    color: white;
+    padding: 2px 15px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.cancelbtn:hover, .signupbtn:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    background-color: darkkhaki;
+    color: white;
+    padding: 0px 0px;
+    margin: 8px 0px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+    float: left;
+    width: 47%;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 30px;
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+    width: 100%;
+    margin-left: 0px;
+}
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 417px;
+    top: 108px;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    z-index: 3;
+}
+.close:hover,
+.close:focus {
+    color: darkcyan;
+    cursor: pointer;
+}
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
