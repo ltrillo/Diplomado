@@ -1,3 +1,11 @@
+function manejoMenu() {
+  var element = document.getElementById("test");
+  var divmenu = document.getElementById("mySidebar");
+  var divmain = document.getElementById("main");
+  element.classList.toggle("change");
+  divmenu.classList.toggle("openmenu");
+ // divmain.classList.toggle("movemain"); //complica el responsive
+}
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
@@ -44,13 +52,33 @@ $.ajax({
   BTC = respuesta.btc_onx_buy;
   BsS = respuesta.onx_bs_buy;
   USD = respuesta.usd_onx_buy;
-  
+    
   USD_BTC = USD / BTC;
   BsS_USD = BsS / USD;
   BTC_ONX = BTC;
   BsS_BTC = BsS / BTC;
   USD_ONX = BTC_ONX * USD_BTC;
   BsS_ONX = BsS_USD * USD_ONX;
+
+  document.getElementById("BTC_ONX_FIXED").innerHTML = BTC;
+
+  USD_ONX_FIXED = USD_ONX.toFixed(8);
+  document.getElementById("USD_ONX_FIXED").innerHTML =  USD_ONX_FIXED;
+
+  BsS_ONX_FIXED = BsS_ONX.toFixed(4);
+  document.getElementById("BsS_ONX_FIXED").innerHTML =  BsS_ONX_FIXED;
+
+  USD_BTC_FIXED = USD_BTC.toFixed(2);
+  document.getElementById("USD_BTC_FIXED").innerHTML = USD_BTC_FIXED;
+
+  BsS_USD_FIXED = BsS_USD.toFixed(4);
+  document.getElementById("BsS_USD_FIXED").innerHTML =  BsS_USD_FIXED;
+
+  
+  
+  
+ 
+
 //referencia de la API de precios de Onixcoin
   console.log("USD_BTC",USD_BTC, "BsS_USD",BsS_USD, "BTC_ONX", BTC_ONX, "BsS_BTC", BsS_BTC, "USD_ONX", USD_ONX, "BsS_ONX", BsS_ONX);
   console.log(respuesta, BTC, BsS, USD);
@@ -74,24 +102,9 @@ console.log("Fecha Actual", fecha, "+ 30 días =", fecha_cuota);
 //evaluación del préstamo y envio de informacion al HTML cuando el usuario hace clic en el boton "calcular"
 function calculaPrestamo() {
   var interes_mensual = 0.01;
-  var cripto = document.getElementById("cripto").value;
-  var aevaluar = document.getElementById("aevaluar").value;
   var monto = document.getElementById("monto").value;
   var plazo = document.getElementById("plazo").value;
-  if (cripto == "Bitcoin (BTC)"){
-    var tipoCripto = 0;
-    window.alert("Los cálculos para prestamos con BTC no están disponibles");
-  } else if (cripto == "OnixCoin (ONX)") {
-    var tipoCripto = 1;
-  }
-  if (aevaluar == "Criptomonedas"){
-    var tipoEvalua = 0;
-  } else if (aevaluar == "Bolívares") {
-    var tipoEvalua = 1;
-    window.alert("Los cálculos en BsS para prestamos no están disponibles");
-  }
-  if (tipoCripto == 1 && tipoEvalua == 0 ) {
-
+  
     pres_ONX = monto * 0.7;
     prestamo_ONX = pres_ONX.toFixed(8);
     pres_BsS = prestamo_ONX * BsS_ONX;
@@ -116,9 +129,9 @@ function calculaPrestamo() {
     comision_USD = comi_USD.toFixed(2);
      //muestro el monto de la comisión flat en todas sus equivalencias
     document.getElementById("comision_ONX").innerHTML = comision_ONX;
-    document.getElementById("comision_BsS").innerHTML = prestamo_BsS;
-    document.getElementById("comision_BTC").innerHTML = prestamo_BTC;
-    document.getElementById("comision_USD").innerHTML = prestamo_USD;
+    document.getElementById("comision_BsS").innerHTML = comision_BsS;
+    document.getElementById("comision_BTC").innerHTML = comision_BTC;
+    document.getElementById("comision_USD").innerHTML = comision_USD;
   
     gara_ONX = ((monto * 0.3) - comision_ONX);
     garantia_ONX = gara_ONX.toFixed(8);
@@ -180,17 +193,6 @@ function calculaPrestamo() {
    
     document.getElementById("date").innerHTML = fecha;//muestro la fecha actual
     document.getElementById("fecha_cuota").innerHTML = fecha_cuota;//muestro la fecha de la primera cuota
-  }
+}  
 //referencia para usar parámetros para realizar los cálculos
-  console.log(cripto, tipoCripto, aevaluar, tipoEvalua,monto, plazo);
-}
-//modal de registro
-var modal = document.getElementById('id01');
-// cierra el modal al hacer clic en cualquier parte fuera del modal
-window.onclick = function(event) {
-    if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
- 
+  console.log(monto, plazo);
