@@ -1,6 +1,6 @@
 /*carousel pagina principal*/
 .carousel-inner img {
-    width: 1348px;
+    width: 100%;
     height: 657px !important;  
     margin: 0;
 }
@@ -15,10 +15,10 @@
 .indicadores {
     position: fixed;
     z-index: 9999;
-    width: 1349px;
+    width: 100%;
 }
 .indicadores h3 {
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 .indicadores .col-sm-12 {
     padding: 0;
@@ -26,26 +26,30 @@
 .indicadores >.col-sm-2 {
     color:whitesmoke;
     text-align: center;
-    background-color: black; opacity: 0.7;;
-    padding: 10px 0 10px 0;
+    background-color: black; opacity: 0.7;
+    padding: 1rem 0 1rem 0;
 }
 .item h3 {
-    color: white !important;
+    color: black !important;
+    background-color: white;
+    font-weight: bold;
     margin-left: 0px;
     margin-top: 0px;
-    background-color: black; opacity: 0.7;
+    opacity: 0.4;
     font-size: 37px;
     letter-spacing: 3px;
     padding-top: 10px;
 }
 .item p {
-    color: white !important;
+    color: black !important;
+    background-color: white;
+    font-weight: bold;
     margin-left: 0px;
     margin-top: 0px;
-    background-color: black; opacity: 0.7;
+    opacity: 0.4;
     font-size: 20px;
     letter-spacing: 5px;
-    margin-bottom: 104px;
+    margin-bottom: 20px;
 }
 /*Menu lateral*/
 .menu {
@@ -118,13 +122,13 @@ a {
 .bar1, .bar2, .bar3 {
     width: 30px;
     height: 5px;
-    background-color: darkgoldenrod; opacity: 0.7;
+    background-color: black; opacity: 0.7;
     margin: 6px 0;
     transition: 0.5s;
 }
 /*Rotación de la primera barra*/
 .change .bar1 {
-    background-color: darkgoldenrod;
+    background-color: white;
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
 }
@@ -134,7 +138,7 @@ a {
 }
 /*Rotación de la tercera barra*/
 .change .bar3 {
-    background-color: darkgoldenrod;
+    background-color: white;
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
@@ -142,7 +146,6 @@ body {
     font: 400 1.8rem Lato, sans-serif;
     line-height: 1.8;
     color: #818181;
-    /*width: 100%;*/
 }
 h1 {
     margin-top: 2px;
@@ -173,45 +176,54 @@ h4 {
     padding: 80px 80px;
   }
 .person {
-    border: 10px solid transparent;
-    background-color: darkcyan;
-    width: 70px;
-    height: 70px;
-    opacity: 1;
+    border: 1px solid transparent;
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
     border-width:4px;
-    border-color: darkkhaki;
+    opacity: 0.7;
+    margin-top: -45px;
+    padding: 15px;
 }
 .person:hover {
-    border-color: #f1f1f1;
+    border-color: red;
+    border-width:2px;
 }
 #demo1 p, #demo2 p, #demo3 p, #demo4 p, #demo5 p, #demo6 p {
     font-size: 1.3rem;
-    color: white !important;
-    background-color: darkcyan; opacity: 0.5;
+    
+    color: red;
+    font-weight: lighter;
     border-radius: 5px;
     padding: 5px;
     margin: 8px 0 0px;
 }
 #como p {
-     color: darkcyan;
+     color: red;
  }
-#como .col-sm-3 >p{
-    margin: 0 0 -30px;
-}
 #como h3 {
     font-size: 2.5rem;
     padding: 10px 0 10px 0 ;
     letter-spacing: 2px;
-    color: white;
-    background-color: darkred; opacity: 0.7;
-    margin-top: 25px;
+    color: black;
+    font-weight: bold;
+    opacity: 0.4;
+    margin-top: 250px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#como .col-sm-12 {
+    padding: 0 50px 0 50px;
+}
+#como .col-sm-2 {
+    padding: 0 5px 0 5px;
 }
 #como .container {
-    padding: 170px 80px;
+    padding:0;
 }
 #como {
     background-color: lightblue;
-    background-image: url("../img/funcionamujer.jpg");
+    background-image: url("../img/escritorio2.jpg");
     background-size: cover;
     background-position: right;
     width: 100%;
@@ -229,142 +241,105 @@ h4 {
 }
 /*Condiciones*/
 #condiciones {
-    padding: 16rem 0rem 5rem 0rem;
+    padding: 0 0 5rem 0;
     background-color: lightblue;
-    background-image: url("../img/imagenloansboy.png");
+    background-image: url("../img/mujer-feliz-relajada.jpg");
     background-size: cover;
     background-position: right;
     width: 100%;
     height: 657px;
 }
-#condiciones .col-sm-8 h3 {
-    font-size: 2.5rem;
-    padding: 10px 0 10px 0 ;
-    letter-spacing: 2px;
-    color: white;
-    background-color: darkorange; opacity: 0.7;
-    margin-top: 25px;
-    margin-bottom: 25px;
+#tasas h2 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: black;
+    opacity: 0.4;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+.panel {
+    border: 1px solid transparent;
+    border-color: green;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-width:4px;
+    background-color: white;
+    opacity: 0.5;
+    margin-top: 0px;
+    padding: 15px;
+}
+.panel h3 {
+    font-size: 5rem;
+    color: green;
+    opacity: 0.8;
     text-align: center;
+    padding: 0px;
+    margin-top: 17px;
 }
-#condiciones .col-sm-8 {
-    padding-bottom: 20px;
+.panel h4 {
+    font-size: 1.4rem;
+    color: green;
+    opacity: 0.8;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
 }
-.panel {/*recuadros de las condiciones*/
-    border: 5px solid darkcyan; 
-    border-radius:8px !important;
-    transition: box-shadow 0.5s;
-    width: 170px;
-    margin-left: 8px;
-    margin-bottom: 60px;
+.panel h5 {
+    font-size: 0.9rem;
+    color: green;
+    opacity: 0.8;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
 }
 .panel:hover {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
 }
-.panel-footer {
-    background-color: #fff !important;
-    color: darkcyan;
-}
-.panel-heading  {
-    color: #fff !important;
-    background-color: darkcyan !important; 
-    padding: 10px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-.panel-heading h1  {
-    font-size: 18px;  
-}
-.panel-footer {
-    background-color: #fff !important;
-}
-.panel-footer h3 {
-    color: green;
-    font-size: 60px;
-}
-.panel-footer h4 {
-    color: whitesmoke;
-    font-size: 12px;
-    background-color: darkgreen; opacity: 0.7;
-    border-radius: 5px;
-    padding: 5px;
-}
 /*Calculadora*/
 #calculadora { 
-    padding: 81px 0px 80px 0px;
-    background-color: rgb(65, 62, 62);
+    padding: 0 0 5rem 0;
+    background-color: lightblue;
+    background-image: url("../img/pqs-calcular-productividad.jpg");
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    height: 657px;
 }
-table, th, td {
-    border-top: 1px solid whitesmoke;
-    border-bottom: 1px solid whitesmoke;
-    border-spacing: 20px;
-    border-collapse: collapse;
-    background-color: white;
-    margin-top: 0px;
-    margin-bottom: 30px;
-    font-size: 1.4rem;
+.container-fluid #datos {
+    padding: 0px 35px 0px 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-th {
-    width: 20%;
+#calculadora h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: black;
+    opacity: 0.4;
+    margin-top: 64px;
+    margin-bottom: 20px;
+}
+#datos button {
+    background-color: blue; opacity: 0.5;
+    padding: 18px;
+}
+#datos button >a {
     padding: 5px;
-    text-align: center;  
-    background-color: rgb(65, 62, 62); 
     color: white;
 }
-td {
-    width: 20%;
-    padding: 2px 10px 0 10px;
-    text-align: right;
-    background-color: rgb(65, 62, 62);
+#datos button >a:hover {
     color: white;
-}
-.onx {
-    background-color: darkgoldenrod;opacity: 0.7;
-}
-.bss {
-    background-color: rgb(187, 5, 5);opacity: 0.7;
-}
-.btc {
-    background-color: darkblue;opacity: 0.7;
-}
-.usd {
-    background-color: rgb(65, 62, 62);opacity: 0.7;
-}
-.green {
-    background-color: darkgreen;opacity: 0.7;
-}
-#tabla_resulta h2  {
-    background-color: black;opacity: 0.5;
-    color: white;
-    letter-spacing: 4px;
-    padding: 10px 0 5px 0 !important;
-    margin-bottom: 0px;
-}
-
-#tabla_resulta p  {
-    background-color: black;opacity: 0.5;
-    color: white;
-    letter-spacing: 2px;
-    padding: 0px 0 10px 0 !important;
-    font-size: 18px;
-}
-#tabla_resulta .col-sm-12 {
-    padding: 0 !important;
-}
-.container-fluid #tabla_resulta {
-    padding: 0px 90px 0px 0px;
+    text-decoration: none;
+    opacity: 0.7;
 }
 #datos select[size], #datos input {
     height:30px ;
     width:100% ;
     color: black;
-    background-color: lightgoldenrodyellow;opacity: 0.7;
+    background-color: lightblue;opacity: 0.7;
     font-size: 15px;
 }
-#datos .col-sm-4, #datos .col-sm-8, #datos .col-sm-2, #datos .col-sm-12 {
+#datos .col-sm-2, #datos .col-sm-6, #datos .col-sm-4 {
     padding: 5px 5px 5px 5px;
     margin-top: 0;
 }
@@ -376,22 +351,94 @@ td {
     font-size: 14px;
 }
 .col-sm-4 {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 100px 0px 60px;
 }
 #datos h2  {
-    background-color: black;opacity: 0.5;
+    background-color: blue;opacity: 0.5;
     color: white;
     letter-spacing: 2px;
-    padding: 10px 15px 10px 15px !important;
-    margin-bottom: 35px;
-    width: 64%;
-    margin-left: 77px;
-    margin-top: 50px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-size: 1.2rem;
+}
+#tabla_resulta button >a {
+    padding: 5px;
+    color: white;
+}
+#tabla_resulta button >a:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 0.7;
+}
+table, th, td {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    opacity: 0.9;
+    border-spacing: 20px;
+    border-collapse: collapse;
+    font-size: 1.4rem;
+}
+th {
+    width: 20%;
+    padding: 5px;
+    text-align: center;  
+    color: white;
+}
+td {
+    width: 20%;
+    padding: 2px 10px 0 10px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+}
+.onx {
+    color: white;
+    background-color: darkgoldenrod;opacity: 0.6;
+}
+.bss {
+    color: white;
+    background-color: rgb(187, 5, 5);opacity: 0.6;
+}
+.btc {
+    color: white;
+    background-color: darkblue;opacity: 0.6;
+}
+.usd {
+    color: white;
+    background-color: black;opacity: 0.6;
+}
+.green {
+    color: white;
+    background-color: darkgreen;opacity: 0.6;
+}
+#tabla_resulta h2  {
+    color: black;opacity: 0.5;
+    letter-spacing: 4px;
+    padding: 0px 0 5px 0;
+    margin-bottom: 0px;
+}
+#tabla_resulta p  {
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+#tabla_resulta .col-sm-12 {
+    padding: 0 !important;
+}
+.container-fluid #tabla_resulta {
+    padding: 0px 50px 0px 10px;
+    margin-top: -30px;
 }
 /*Preguntas Frecuentes*/
 #faq {
-    padding: 27px 20px 0px 20px;
-    background-color: rgb(1, 49, 1);opacity: 0.9;
+    padding: 0 0 5rem 0;
+    background-color: lightblue;
+    background-image: url("../img/question-mark-2492009_1920-740x380.jpg");
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    height: 657px;
 }
 #faq .container-fluid {
     padding: 0px 35px 95px 35px;
@@ -401,22 +448,21 @@ td {
     margin: 0;
 }
 #faq p {
-    color:darkkhaki;
-    margin-top: 0px !important;
+    color:white;
+    opacity: 0.9;
     font-size: 13px;
     text-align: justify;
 }
 #faq h2 {
-    background-color:darkorange;opacity: 0.9;
-    color: white;
+    color: white;  
+   
     letter-spacing: 2px;
     padding: 10px 0px 10px 0px !important;
-    margin-bottom: 20px;
-    width: 100%;
+    margin-bottom: 38px;
+    margin-top: 57px;
 }
 #faq h4{
-   
-    color: white;
+    color: red;
     margin-bottom: 0px;
     font-size: 14px;
 }
@@ -425,6 +471,15 @@ td {
     padding-left: 30px;
 }
 /*Contacto*/
+#contacto {
+    padding: 220px 50px 0 50px;
+    background-color: lightblue;
+    background-image: url("../img/contact-us1.jpg");
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    height: 480px;
+}
 .container {
     margin: 0px 0px;
     width: 100%;
@@ -437,37 +492,23 @@ td {
     background-color:white;
 }
 #contacto p {
-    color:darkgoldenrod;
+    color:white;
+    opacity: 0.6;
     font-size: 1.7rem;
 }
-#contacto h2 {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: darkgoldenrod;
-    font-weight: 600;
-    margin-top: 0px;
-    margin-bottom: 30px;
-}
-button {
-    color: white;
-    background-color: darkolivegreen;
-}
 .form-control {
-    background-color: lightgreen;
+    background-color: white;
+    opacity: 0.4;
     color:black;
 } 
-
-.bg-grey {
-    background-color: rgb(1, 49, 1);opacity: 0.9; background-color: rgb(1, 49, 1);opacity: 0.9;
-}
 footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
-    color: darkgoldenrod;
+    color: white;
 }
 footer {
-    background-color: rgb(1, 49, 1);opacity: 0.9;
-    color: darkgoldenrod;
+    background-color: black;
+    color:  white;
 }
 @keyframes slide {
     0% {
@@ -493,27 +534,42 @@ footer {
 @media (min-width: 1440px) {
 }    
 @media (min-width: 769px) and (max-width: 1024px) {
-  
 }    
-@media (min-width: 768px) {
-    
+@media (min-width: 768px) { 
 }
-@media (max-width: 600px) {
-    .carousel-caption {
-        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    .indicadores h3 {
+        font-size: 1.4rem;
     }
-}
 @media screen and (min-width: 425px) {
-   
 }
 @media (min-width: 321px) and (max-width: 375px) {
-    body {
-        width: 122% !important;
-    }
 }
 @media (max-width: 320px) {
-    body {
-        width: 154% !important;
+    .carousel-inner {
+        width: 149%;
+        height: 656px;
     }
+    #como {
+        width: 149%;
+        height: 268px;
+    }
+    #condiciones {
+        width: 149%;
+        height: 268px;
+    }
+    #calculadora {
+        width: 149%;
+        height: 268px;
+    }
+    #faq {
+        width: 149%;
+        height: 268px;
+    }
+    #contacto {
+        width: 149%;
+        height: 268px;
+    }
+
+    
 }
 

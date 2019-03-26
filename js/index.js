@@ -1,7 +1,7 @@
 function manejoMenu() {
   var element = document.getElementById("test");
   var divmenu = document.getElementById("mySidebar");
-  var divmain = document.getElementById("main");
+  //var divmain = document.getElementById("main");
   element.classList.toggle("change");
   divmenu.classList.toggle("openmenu");
  // divmain.classList.toggle("movemain"); //complica el responsive
@@ -19,6 +19,7 @@ $(document).ready(function(){
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
+        
       }, 900, function(){
       // Add hash (#) to URL when done scrolling (default click behavior)
       window.location.hash = hash;
@@ -46,48 +47,49 @@ var BsS_BTC = 0;
 var USD_ONX = 0;
 var BsS_ONX = 0;
 
-$.ajax({
-	url: 'https://precio.onixcoin.com/api/v1/price/VEN/',
-	success: function(respuesta) {
-  BTC = respuesta.btc_onx_buy;
-  BsS = respuesta.onx_bs_buy;
-  USD = respuesta.usd_onx_buy;
+$(document).ready(function() { //actualiza los indicadores 30 segundos
+  function update() {
+    $.ajax({
+      url: 'https://precio.onixcoin.com/api/v1/price/VEN/',
+      success: function(respuesta) {
+      BTC = respuesta.btc_onx_buy;
+      BsS = respuesta.onx_bs_buy;
+      USD = respuesta.usd_onx_buy;
+        
+      USD_BTC = USD / BTC;
+      BsS_USD = BsS / USD;
+      BTC_ONX = BTC;
+      BsS_BTC = BsS / BTC;
+      USD_ONX = BTC_ONX * USD_BTC;
+      BsS_ONX = BsS_USD * USD_ONX;
     
-  USD_BTC = USD / BTC;
-  BsS_USD = BsS / USD;
-  BTC_ONX = BTC;
-  BsS_BTC = BsS / BTC;
-  USD_ONX = BTC_ONX * USD_BTC;
-  BsS_ONX = BsS_USD * USD_ONX;
-
-  document.getElementById("BTC_ONX_FIXED").innerHTML = BTC;
-
-  USD_ONX_FIXED = USD_ONX.toFixed(8);
-  document.getElementById("USD_ONX_FIXED").innerHTML =  USD_ONX_FIXED;
-
-  BsS_ONX_FIXED = BsS_ONX.toFixed(4);
-  document.getElementById("BsS_ONX_FIXED").innerHTML =  BsS_ONX_FIXED;
-
-  USD_BTC_FIXED = USD_BTC.toFixed(2);
-  document.getElementById("USD_BTC_FIXED").innerHTML = USD_BTC_FIXED;
-
-  BsS_USD_FIXED = BsS_USD.toFixed(4);
-  document.getElementById("BsS_USD_FIXED").innerHTML =  BsS_USD_FIXED;
-
-  
-  
-  
- 
-
-//referencia de la API de precios de Onixcoin
-  console.log("USD_BTC",USD_BTC, "BsS_USD",BsS_USD, "BTC_ONX", BTC_ONX, "BsS_BTC", BsS_BTC, "USD_ONX", USD_ONX, "BsS_ONX", BsS_ONX);
-  console.log(respuesta, BTC, BsS, USD);
-   
-	},
-	error: function() {
-        console.log("No se ha podido obtener la información");
-    }
+      document.getElementById("BTC_ONX_FIXED").innerHTML = BTC;
+    
+      USD_ONX_FIXED = USD_ONX.toFixed(8);
+      document.getElementById("USD_ONX_FIXED").innerHTML =  USD_ONX_FIXED;
+    
+      BsS_ONX_FIXED = BsS_ONX.toFixed(4);
+      document.getElementById("BsS_ONX_FIXED").innerHTML =  BsS_ONX_FIXED;
+    
+      USD_BTC_FIXED = USD_BTC.toFixed(2);
+      document.getElementById("USD_BTC_FIXED").innerHTML = USD_BTC_FIXED;
+    
+      BsS_USD_FIXED = BsS_USD.toFixed(4);
+      document.getElementById("BsS_USD_FIXED").innerHTML =  BsS_USD_FIXED;
+    
+    //referencia de la API de precios de Onixcoin
+      console.log("USD_BTC",USD_BTC, "BsS_USD",BsS_USD, "BTC_ONX", BTC_ONX, "BsS_BTC", BsS_BTC, "USD_ONX", USD_ONX, "BsS_ONX", BsS_ONX);
+      console.log(respuesta, BTC, BsS, USD);
+       
+      },
+      error: function() {
+            console.log("No se ha podido obtener la información");
+        }
+    });
+  }
+  setInterval(update, 3000);
 });
+
 //fecha actual y cálculo de la fecha de primera cuota 30 días después 
 var fecha = new Date();
 var fecha_cuota = new Date();
